@@ -1,3 +1,7 @@
+## 0.3.5
+
+- May 2023 forcing null safety + 2.12.0
+
 ## 0.3.3 (and 0.3.4)
 
 - Bumping version number, so pub.dev can accept the package

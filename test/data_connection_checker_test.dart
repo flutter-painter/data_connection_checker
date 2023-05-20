@@ -5,13 +5,13 @@ import 'package:test/test.dart';
 
 void main() async {
   group('data_connection_checker', () {
-    StreamSubscription<DataConnectionStatus> listener1;
-    StreamSubscription<DataConnectionStatus> listener2;
+    var listener1 = Stream.empty() as StreamSubscription<DataConnectionStatus>;
+    var listener2 = Stream.empty() as StreamSubscription<DataConnectionStatus>;
 
     tearDown(() {
       // destroy any active listener after each test
-      listener1?.cancel();
-      listener2?.cancel();
+      listener1.cancel();
+      listener2.cancel();
     });
 
     test('''Initial results List 'lastTryResults' should be empty''', () {
@@ -113,6 +113,5 @@ void main() async {
         isFalse,
       );
     });
-    
   });
 }

@@ -7,13 +7,13 @@ main() async {
   // returns a bool
 
   // We can also get an enum instead of a bool
-  print("Current status: ${await DataConnectionChecker().connectionStatus}");
+  print('Current status: ${await DataConnectionChecker().connectionStatus}');
   // prints either DataConnectionStatus.connected
   // or DataConnectionStatus.disconnected
 
   // This returns the last results from the last call
   // to either hasConnection or connectionStatus
-  print("Last results: ${DataConnectionChecker().lastTryResults}");
+  print('Last results: ${DataConnectionChecker().lastTryResults}');
 
   // actively listen for status updates
   var listener = DataConnectionChecker().onStatusChange.listen((status) {
